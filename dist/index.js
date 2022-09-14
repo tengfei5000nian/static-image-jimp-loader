@@ -48,15 +48,15 @@ function validateQuery(query) {
     scale: [],
     scaleToFit: [],
     color: [],
-    special: new Map(),
+    special: [],
     merge: true,
     methods
   });
 
   _schemaUtils.default.validate(_options.default, _query);
 
-  _query.special.forEach((value, key) => {
-    _query.special.set(key, validateQuery(value));
+  _query.special.forEach(item => {
+    item.options = validateQuery(item.options);
   });
 
   return _query;
@@ -153,12 +153,12 @@ function moduleQuery(query, resource) {
   if (!urlQuery.merge) return urlQuery;
   const globalQuery = validateQuery(query);
   let specialQuery = validateQuery({});
-  globalQuery.special.forEach((value, key) => {
-    if (key instanceof RegExp && key.test(resource) || typeof key === 'string' && ~resource.indexOf(key)) {
-      if (value.merge) {
-        specialQuery = extend(value, specialQuery);
+  globalQuery.special.forEach(item => {
+    if (item.test instanceof RegExp && item.test.test(resource) || typeof item.test === 'string' && ~resource.indexOf(item.test)) {
+      if (item.options.merge) {
+        specialQuery = extend(item.options, specialQuery);
       } else {
-        specialQuery = value;
+        specialQuery = item.options;
       }
     }
   });

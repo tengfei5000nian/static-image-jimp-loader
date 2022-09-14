@@ -2,47 +2,47 @@
   "additionalProperties": true,
   "properties": {
     "contain": {
-      "description": "Contain an image within a height and width.",
+      "description": "包含高度和宽度范围内的图像。",
       "type": "array"
     },
     "cover": {
-      "description": "Scale the image so the given width and height keeping the aspect ratio.",
+      "description": "缩放图像，使给定的宽度和高度保持纵横比。",
       "type": "array"
     },
     "flip": {
-      "description": "Flip an image along it's x or y axis.",
+      "description": "沿图像的x轴或y轴翻转图像。",
       "type": "array"
     },
     "resize": {
-      "description": "Resize an image.",
+      "description": "调整图像大小。",
       "type": "array"
     },
     "rotate": {
-      "description": "Rotate an image.",
+      "description": "旋转图像。",
       "type": "array"
     },
     "scale": {
-      "description": "Uniformly scales the image by a factor.",
+      "description": "将图像均匀缩放一个因子。",
       "type": "array"
     },
     "scaleToFit": {
-      "description": "Scale the image to the largest size that fits inside the rectangle that has the given width and height.",
+      "description": "将图像缩放到适合具有给定宽度和高度的矩形内的最大尺寸。",
       "type": "array"
     },
     "color": {
-      "description": "Various color manipulation methods.",
+      "description": "各种颜色处理方法。",
       "type": "array"
     },
     "special": {
       "description": "特殊路径资源配置",
-      "type": "object"
+      "type": "array"
     },
     "merge": {
       "description": "是否向下合并配置",
       "type": "boolean"
     },
     "methods": {
-      "description": "使用的转换方法",
+      "description": "使用的方法顺序",
       "type": "array"
     }
   },
