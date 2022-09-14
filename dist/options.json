@@ -1,0 +1,50 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "contain": {
+      "description": "Contain an image within a height and width.",
+      "type": "array"
+    },
+    "cover": {
+      "description": "Scale the image so the given width and height keeping the aspect ratio.",
+      "type": "array"
+    },
+    "flip": {
+      "description": "Flip an image along it's x or y axis.",
+      "type": "array"
+    },
+    "resize": {
+      "description": "Resize an image.",
+      "type": "array"
+    },
+    "rotate": {
+      "description": "Rotate an image.",
+      "type": "array"
+    },
+    "scale": {
+      "description": "Uniformly scales the image by a factor.",
+      "type": "array"
+    },
+    "scaleToFit": {
+      "description": "Scale the image to the largest size that fits inside the rectangle that has the given width and height.",
+      "type": "array"
+    },
+    "color": {
+      "description": "Various color manipulation methods.",
+      "type": "array"
+    },
+    "special": {
+      "description": "特殊路径资源配置",
+      "type": "object"
+    },
+    "merge": {
+      "description": "是否向下合并配置",
+      "type": "boolean"
+    },
+    "methods": {
+      "description": "使用的转换方法",
+      "type": "array"
+    }
+  },
+  "type": "object"
+}
